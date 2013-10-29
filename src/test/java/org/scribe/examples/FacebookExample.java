@@ -1,11 +1,15 @@
 package org.scribe.examples;
 
-import java.util.*;
+import java.util.Scanner;
 
-import org.scribe.builder.*;
-import org.scribe.builder.api.*;
-import org.scribe.model.*;
-import org.scribe.oauth.*;
+import org.scribe.builder.ServiceBuilder;
+import org.scribe.builder.api.FacebookApi;
+import org.scribe.model.OAuthRequest;
+import org.scribe.model.Response;
+import org.scribe.model.Token;
+import org.scribe.model.Verb;
+import org.scribe.model.Verifier;
+import org.scribe.oauth.OAuthService;
 
 public class FacebookExample
 {
@@ -16,13 +20,13 @@ public class FacebookExample
   public static void main(String[] args)
   {
     // Replace these with your own api key and secret
-    String apiKey = "your_app_id";
-    String apiSecret = "your_api_secret";
+    String apiKey = "248142785310499";
+    String apiSecret = "4056e1a98140e51d433b3ee966958d5d";
     OAuthService service = new ServiceBuilder()
                                   .provider(FacebookApi.class)
                                   .apiKey(apiKey)
                                   .apiSecret(apiSecret)
-                                  .callback("http://www.example.com/oauth_callback/")
+                                  .callback("http://3zyj.localtunnel.com/")
                                   .build();
     Scanner in = new Scanner(System.in);
 

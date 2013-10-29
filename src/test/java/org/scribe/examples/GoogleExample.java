@@ -18,8 +18,8 @@ public class GoogleExample
   {
     OAuthService service = new ServiceBuilder()
                                   .provider(GoogleApi.class)
-                                  .apiKey("anonymous")
-                                  .apiSecret("anonymous")
+                                  .apiKey("217187867916-i4dvf9nujrfb67kk57rp4aqnhfma76gf.apps.googleusercontent.com")
+                                  .apiSecret("bFHs_U602ub7lt6At4sBf0NN")
                                   .scope(SCOPE)
                                   .build();
     Scanner in = new Scanner(System.in);
@@ -46,6 +46,7 @@ public class GoogleExample
     Token accessToken = service.getAccessToken(requestToken, verifier);
     System.out.println("Got the Access Token!");
     System.out.println("(if your curious it looks like this: " + accessToken + " )");
+    System.out.println("body: " + accessToken.getRawResponse());
     System.out.println();
 
     // Now let's go and ask for a protected resource!
